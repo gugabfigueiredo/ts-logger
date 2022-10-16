@@ -40,6 +40,12 @@ export class Logger {
         if ([LOG_LEVEL.ERROR, LOG_LEVEL.DEBUG, LOG_LEVEL.ALL].includes(this.level))
             this.print({level: "ERROR", message: message, err: err, ...tags});
     }
+
+    F(message: string, err: any, tags?: object) {
+        if ([LOG_LEVEL.ERROR, LOG_LEVEL.DEBUG, LOG_LEVEL.ALL].includes(this.level))
+            this.print({level: "FATAL", message: message, err: err, ...tags});
+        process.exit(1);
+    }
 }
 
 export const LOG_LEVEL = {

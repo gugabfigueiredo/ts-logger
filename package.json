@@ -12,5 +12,8 @@
   "files": [
     "/lib"
   ],
-  "author": "Guga Figueiredo"
+  "author": "Guga Figueiredo",
+  "devDependencies": {
+    "@types/node": "^18.11.0"
+  }
 }
