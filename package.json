@@ -1,6 +1,6 @@
 {
   "name": "mini-ts-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A new minimal logger lib written in typescript because reasons",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
