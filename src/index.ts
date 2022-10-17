@@ -23,8 +23,8 @@ export class Logger {
     }
 
     log(tags: {[k: string]: any}) {
-        const { level, message, ...tail } = tags
-        this.emitter.log(JSON.stringify({timestamp: new Date().toISOString(), level, message, ...this.context, ...tail}))
+        const { context, level, message, ...tail } = tags
+        this.emitter.log(JSON.stringify({timestamp: new Date().toISOString(), context, level, message, ...this.context, ...tail}))
     }
 
     I(message: string, tags?: {[k: string]: any}) {
